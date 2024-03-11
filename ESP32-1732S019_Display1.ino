@@ -6,7 +6,8 @@ ESP32-1732S019 ARDUINO IDE 2.3.2 ESP32-S3, 1,9 zoll 170*320
 #include <HTTPClient.h>   // by A.McEwen ver 2.2.0
 #include <ArduinoJson.h>  // by B.Blanchon ver 7.0.3
 /*
-Copy this in ~/Arduino/libraries/TFT_eSPI/User_Setup.h
+In Linux copy this to ~/Arduino/libraries/TFT_eSPI/User_Setup.h
+And in Windows to C:\Users\YOR_USER_NAME\Documents\Arduino\libraries\TFT_eSPI\User_Setup.h
 #define ST7789_DRIVER  
 #define TFT_WIDTH 170
 #define TFT_HEIGHT 320
