@@ -10,9 +10,9 @@ ESP32-1732S019 ARDUINO IDE 2.3.2 ESP32-S3, 1,9 zoll 170*320
 
 ## How to install ARDUINO IDE 2.0.3 with ESP32 support on Windows
 
-It Arduino does not start, check log fils in C:\Users\Stefan Fleichmann\AppData\Roaming\Arduino IDE. If it tells you somthing about a json file not found, 
+It Arduino does not start, check log files in "C:\Users\Stefan Fleichmann\AppData\Roaming\Arduino IDE". If it tells you somthing about a json file not found, 
 download [https://downloads.arduino.cc/libraries/library_index.json](https://downloads.arduino.cc/libraries/library_index.json) and copy it to 
-C:\Users\YOUR_USER_NAME\AppData\Local\Arduino15
+"C:\Users\YOUR_USER_NAME\AppData\Local\Arduino15"
 
 Select "ESP32-S3 Dev Board" in your bord selection, it will then install all your files.
 
