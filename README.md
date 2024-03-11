@@ -16,7 +16,15 @@ C:\Users\YOUR_USER_NAME\AppData\Local\Arduino15
 
 Select "ESP32-S3 Dev Board" in your bord selection, it will then install all your files.
 
-Copy this in ~/Arduino/libraries/TFT_eSPI/User_Setup.h
+Install librarys:
+```
+#include <TFT_eSPI.h>     // by Bodmer ver 2.5.43
+#include <NTPClient.h>    // by F.Weinberg ver 3.2.1
+#include <HTTPClient.h>   // by A.McEwen ver 2.2.0
+#include <ArduinoJson.h>  // by B.Blanchon ver 7.0.3
+```
+
+Copy this in ~/Arduino/libraries/TFT_eSPI/User_Setup.h 
 ```
 #define ST7789_DRIVER  
 #define TFT_WIDTH 170
