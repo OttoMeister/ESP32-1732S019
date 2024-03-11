@@ -24,8 +24,8 @@ Install librarys:
 #include <HTTPClient.h>   // by A.McEwen ver 2.2.0
 #include <ArduinoJson.h>  // by B.Blanchon ver 7.0.3
 ```
-
-Copy this in ~/Arduino/libraries/TFT_eSPI/User_Setup.h 
+Copy this in "~/Arduino/libraries/TFT_eSPI/User_Setup.h" or
+"C:\Users\YOR_USER_NAME\Documents\Arduino\libraries\TFT_eSPI\User_Setup.h"
 ```
 #define ST7789_DRIVER  
 #define TFT_WIDTH 170
