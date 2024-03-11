@@ -14,7 +14,8 @@ It Arduino does not start, check log files in "C:\Users\Stefan Fleichmann\AppDat
 download [https://downloads.arduino.cc/libraries/library_index.json](https://downloads.arduino.cc/libraries/library_index.json) and copy it to 
 "C:\Users\YOUR_USER_NAME\AppData\Local\Arduino15"
 
-Select "ESP32-S3 Dev Board" in your bord selection, it will then install all your files.
+Open BoardManger and install ESP32 by Espressif (2.0.11)
+Select "ESP32-S3 Dev Board" in your bord selection.
 
 Install librarys:
 ```
