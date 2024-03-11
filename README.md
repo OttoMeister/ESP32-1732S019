@@ -14,6 +14,8 @@ It Arduino does not start, check log fils in C:\Users\Stefan Fleichmann\AppData\
 download [https://downloads.arduino.cc/libraries/library_index.json](https://downloads.arduino.cc/libraries/library_index.json) and copy it to 
 C:\Users\YOUR_USER_NAME\AppData\Local\Arduino15
 
+Select "ESP32-S3 Dev Board" in your bord selection, it will then install all your files.
+
 Copy this in ~/Arduino/libraries/TFT_eSPI/User_Setup.h
 ```
 #define ST7789_DRIVER  
