@@ -1,5 +1,5 @@
 # ESP32-1732S019
-ESP32-1732S019 ARDUINO IDE 2.3.2 ESP32-S3, 1,9 zoll 170*320 
+ESP32-1732S019 ARDUINO ESP32-S3, 1,9 zoll 170*320 
 
 ![ESP32-1732S019](https://github.com/OttoMeister/ESP32-1732S019/assets/12480979/2e7e7fbe-8a32-4804-abf7-d8c90f59159e)
 
@@ -8,47 +8,82 @@ ESP32-1732S019 ARDUINO IDE 2.3.2 ESP32-S3, 1,9 zoll 170*320
 [Aliexpress 2](https://www.aliexpress.us/item/3256806071867483.html) ,
 [Aliexpress 3](https://www.aliexpress.us/item/3256806436770867.html) <br>
 
-## How to install ARDUINO IDE 2.0.3 with ESP32 support on Windows
 
-Open BoardManger and install ESP32 by Espressif (2.0.11)
-Select "ESP32-S3 Dev Board" in your bord selection.
+<br>
+Thanks to the efforts of these individuals and many others, programming on Suntown displays has become very easy. 
+<br>
+https://github.com/rzeldent/esp32-smartdisplay<br>
+https://github.com/rzeldent/platformio-espressif32-sunton<br>
+https://github.com/lvgl/lv_port_esp32<br>
+https://github.com/platformio/platformio-core<br>
+https://github.com/witnessmenow/ESP32-Cheap-Yellow-Display<br>
+<br>
+Here, I used the ESP32-1732S019 to create a small demo project featuring WiFi, METAR (Meteorological Aerodrome Report) weather data, and NTP time. 
 
-Install librarys:
+## Install PlatformIO on Linux (no IDE)
 ```
-#include <TFT_eSPI.h>     // by Bodmer ver 2.5.43
-#include <NTPClient.h>    // by F.Weinberg ver 3.2.1
-#include <HTTPClient.h>   // by A.McEwen ver 2.2.0
-#include <ArduinoJson.h>  // by B.Blanchon ver 7.0.3
+curl -fsSL -o get-platformio.py https://raw.githubusercontent.com/platformio/platformio-core-installer/master/get-platformio.py
+python3 get-platformio.py
+curl -fsSL https://raw.githubusercontent.com/platformio/platformio-core/develop/platformio/assets/system/99-platformio-udev.rules | sudo tee /etc/udev/rules.d/99-platformio-udev.rules
+sudo service udev restart
+export PATH=$PATH:$HOME/.local/bin
+ln -s ~/.platformio/penv/bin/platformio ~/.local/bin/platformio
+ln -s ~/.platformio/penv/bin/pio ~/.local/bin/pio
+ln -s ~/.platformio/penv/bin/piodebuggdb ~/.local/bin/piodebuggdb
+pio settings set enable_telemetry no
+pio settings set check_platformio_interval 9999
 ```
-Copy this in "~/Arduino/libraries/TFT_eSPI/User_Setup.h" or
-"C:\Users\YOR_USER_NAME\Documents\Arduino\libraries\TFT_eSPI\User_Setup.h"
+## Compile with PlatformIO on Linux
 ```
-#define ST7789_DRIVER  
-#define TFT_WIDTH 170
-#define TFT_HEIGHT 320
-#define TFT_MISO -1 
-#define TFT_MOSI 13   
-#define TFT_SCLK 12
-#define TFT_CS   10 
-#define TFT_DC   11 
-#define TFT_RST  1 
-#define TFT_BL   14
-#define TFT_BACKLIGHT_ON HIGH
-#define LOAD_GLCD  
-#define LOAD_FONT2 
-#define LOAD_FONT4 
-#define LOAD_FONT6 
-#define LOAD_FONT7
-#define LOAD_FONT8 
-#define LOAD_GFXFF 
-#define SMOOTH_FONT
-#define SPI_FREQUENCY  40000000
+git clone https://github.com/OttoMeister/ARDUINO_ESP32-2432S028R
+cd ARDUINO_ESP32-2432S028R/
+platformio run 
+platformio run --upload-port  /dev/ttyUSB0 -t upload
+platformio run --monitor-port /dev/ttyUSB0 -t monitor
 ```
-
-
-
-
-
-
-
+## Install PlatformIO on Win10-11 (no IDE)
+Windows Command Prompt <br>
+Install Python:
+```
+winget install Python.Python.3.13
+REM Restart Windows Command Prompt 
+python -V
+python.exe -m pip install --upgrade pip
+```
+Install Git:
+```
+winget install git.git
+REM restart Windows Command Prompt 
+git --version
+```
+Install PlatformIO:
+```
+pip install platformio
+pio --version
+pio settings set enable_telemetry no
+pio settings set check_platformio_interval 9999
+```
+Install CP210x driver:
+```
+cd %USERPROFILE%\Desktop
+curl -L --fail -o cp210x.zip https://www.silabs.com/documents/public/software/CP210x_Windows_Drivers.zip --silent
+mkdir cp210x
+tar -xf cp210x.zip -C cp210x
+start /wait cp210x\CP210xVCPInstaller_x64.exe /S
+```
+Install CH340 (WCH) driver:
+```
+cd %USERPROFILE%\Desktop
+curl -L --fail -o CH341SER.exe https://www.wch.cn/download/file?id=65  --silent
+start /wait CH341SER.exe /S
+```
+## Compile with PlatformIO on Win10-11
+```
+cd %USERPROFILE%\Desktop
+git clone https://github.com/OttoMeister/ARDUINO_ESP32-2432S028R
+cd ARDUINO_ESP32-2432S028R/
+platformio run 
+platformio run --upload-port  COM1 -t upload
+platformio run --monitor-port COM1 -t monitor
+```
 
