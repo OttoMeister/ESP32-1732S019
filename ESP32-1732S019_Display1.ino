@@ -1,34 +1,10 @@
-/*
-ESP32-1732S019 ARDUINO IDE 2.3.2 ESP32-S3, 1,9 zoll 170*320 
-*/
+// ESP32-1732S019 ARDUINO IDE 2.3.2 ESP32-S3, 1,9 zoll 170*320 
+
 #include <TFT_eSPI.h>     // by Bodmer ver 2.5.43
 #include <NTPClient.h>    // by F.Weinberg ver 3.2.1
 #include <HTTPClient.h>   // by A.McEwen ver 2.2.0
 #include <ArduinoJson.h>  // by B.Blanchon ver 7.0.3
-/*
-In Linux copy this to ~/Arduino/libraries/TFT_eSPI/User_Setup.h
-And in Windows to C:\Users\YOR_USER_NAME\Documents\Arduino\libraries\TFT_eSPI\User_Setup.h
-#define ST7789_DRIVER  
-#define TFT_WIDTH 170
-#define TFT_HEIGHT 320
-#define TFT_MISO -1 
-#define TFT_MOSI 13   
-#define TFT_SCLK 12
-#define TFT_CS   10 
-#define TFT_DC   11 
-#define TFT_RST  1 
-#define TFT_BL   14
-#define TFT_BACKLIGHT_ON HIGH
-#define LOAD_GLCD  
-#define LOAD_FONT2 
-#define LOAD_FONT4 
-#define LOAD_FONT6 
-#define LOAD_FONT7
-#define LOAD_FONT8 
-#define LOAD_GFXFF 
-#define SMOOTH_FONT
-#define SPI_FREQUENCY  40000000
-*/
+
 // prepare WiFi
 const char* ssid = "xxxxxxxxxxxxxxx";                                                 // Replace with your
 const char* password = "xxxxxxxxxx";                                                  // WiFi credentials
