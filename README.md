@@ -6,12 +6,10 @@ ESP32-1732S019 ARDUINO ESP32-S3, 1,9 zoll 170*320
 ## General Information
 [Aliexpress 1](https://www.aliexpress.us/item/3256806186900969.html) , 
 [Aliexpress 2](https://www.aliexpress.us/item/3256806071867483.html) ,
-[Aliexpress 3](https://www.aliexpress.us/item/3256806436770867.html) <br>
-
-
+[Aliexpress 3](https://www.aliexpress.us/item/3256806436770867.html) 
 <br>
 Thanks to the efforts of these individuals and many others, programming on Suntown displays has become very easy. 
-<br>
+<br><br>
 https://github.com/rzeldent/esp32-smartdisplay<br>
 https://github.com/rzeldent/platformio-espressif32-sunton<br>
 https://github.com/lvgl/lv_port_esp32<br>
